@@ -1,0 +1,41 @@
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Story App</h1>
+            <p class="lead text-muted">Write your owen story</p>
+            <p> 
+                {{#if user}}
+                    <a href="/user/creat" class="btn btn-primary my-2">Creat Your Own Story</a> 
+                {{else}}
+                    <a href="/user/login" class="btn btn-primary my-2">Creat Your Own Story</a> 
+                {{/if}}
+            </p>   
+        </div>
+    </section>
+
+    <section class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {{#each story }}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top img-thumbnail Responsive image image-size rounded mx-auto d-block mt-2" src="../uploads/{{Image}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h6 class="card-title"> <a href="story/{{id}}"> {{Headline}} </a> </h6>
+                                <p class="card-text"> {{Topic}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{Date}}</small>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block mt-2" onclick="window.location='story/{{id}}';" >View</button>
+                            </div>
+                        </div>
+                    </div>
+                {{else}}
+                {{/each}}
+            </div>
+        </div>
+    </section>
+</main> 
+

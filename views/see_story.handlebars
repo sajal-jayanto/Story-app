@@ -1,0 +1,23 @@
+
+<main role="main">
+    
+   
+    <section class="album py-5 bg-light">
+       {{#if story}}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card mb-12 box-shadow">
+                        <img class="card-img-top img-thumbnail Responsive image image-size rounded mx-auto d-block mt-2" src="../uploads/{{story.Image}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h1 class="card-title text-center mb-5">{{story.Headline}}</h1>
+                            {{{story.Content}}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         {{/if}}
+    </section> 
+</main> 
+

@@ -1,0 +1,33 @@
+<div style="margin:5%;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <div class="card top-margin">
+                <div class="card-header text-center"> <strong> Edit Story </strong> </div>
+                <div class="card-body">
+                    <form action="/user/edit/{{story.id}}?_method=put" method="post"> 
+                        <input type="hidden" name="_method" value="PUT">
+                        <div class="form-group">
+                            <label> <strong> Headline </strong> </label>
+                            <input type="text" class="form-control" name="headline" required value="{{story.Headline}}">
+                        </div>
+                        <div class="form-group">
+                            <label> <strong> Topic </strong> </label>
+                            <input type="text" class="form-control" name="topic" required value="{{story.Topic}}">
+                        </div>
+                        <div class="form-group">
+                            <label> <strong> Image </strong> </label>
+                            <input type="file" class="form-control-file border" name="image" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label> <strong> Story </strong> </label>
+                            <textarea name="story_body" required > {{{story.Content}}}</textarea>
+                        </div> 
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

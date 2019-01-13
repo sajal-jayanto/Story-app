@@ -1,0 +1,41 @@
+<div style="margin:5%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card top-margin">
+                    {{> errors}}
+                    <div class="card-header text-center"> <strong> Sing Up </strong> </div>
+                    <div class="card-body">
+                        <form action="/user/register" method="post">
+                            <div class="form-group">
+                                <label>First Name :</label>
+                                <input type="text" class="form-control" name="fname" placeholder="Enter first name" required value="{{fname}}">
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name :</label>
+                                <input type="text" class="form-control" name="lname" placeholder="Enter last name" required value="{{lname}}">
+                            </div>
+                            <div class="form-group">
+                                <label>Email :</label>
+                                <input type="email" class="form-control" name="email" placeholder="Enter your email" required value="{{email}}">
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Birth :</label>
+                                <input type="date" class="form-control" name="date" value="1995-07-22" min="1900-01-01" max="2100-12-31" required value="{{date}}">
+                            </div>
+                            <div class="form-group">
+                                <label>Password :</label>
+                                <input type="password" class="form-control" name="pass" placeholder="Enter password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirm Password :</label>
+                                <input type="password" class="form-control" name="pass2" placeholder="Enter password again" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div style="margin:5%;">
+<main role="main">
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {{#each story }}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top img-thumbnail Responsive image image-size rounded mx-auto d-block mt-2" src="../uploads/{{Image}}" alt="Card image cap">
+                            <div class="card-body">
+                                <h6 class="card-title"> <a href="story/{{id}}"> {{Headline}} </a> </h6>
+                                <p class="card-text"> {{Topic}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">{{Date}}</small>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-block mt-2" onclick="window.location='edit/{{id}}';" >Edit</button>
+                                <form action="/user/edit/{{id}}?_method=DELETE" method="post">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger btn-block mt-2">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                {{else}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main> 
+</div>
